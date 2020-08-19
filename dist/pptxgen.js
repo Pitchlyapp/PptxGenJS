@@ -3640,7 +3640,7 @@ var PptxGenJS = function(){
 				}
 
 				if ( textObj.options.lineSpacing ) {
-					strXmlLnSpc = '<a:lnSpc><a:spcPts val="' + textObj.options.lineSpacing + '00"/></a:lnSpc>';
+					strXmlLnSpc = '<a:lnSpc><a:spcPct val="' + (100000 * textObj.options.lineSpacing) + '"/></a:lnSpc>';
 				}
 
 				// OPTION: indent
