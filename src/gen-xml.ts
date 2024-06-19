@@ -919,7 +919,7 @@ function genXmlParagraphProperties(textObj: ISlideObject | TextProps, isDefault:
 			}" indent="-${bulletMarL}"`
 			strXmlBullet = `<a:buSzPct val="100000"/><a:buChar char="${BULLET_TYPES['DEFAULT']}"/>`
 			if (textObj.options.bullet.color) {
-				strXmlBullet += '<a:buClr><a:srgbClr val=textObj.options.bullet.color/></a:buClr>';
+				strXmlBullet += '<a:buClr><a:srgbClr val="' + textObj.options.bullet.color + '"/></a:buClr>';
 				console.log('bullet', strXmlBullet);
 			}
 		} else if (textObj.options.bullet === false) {
