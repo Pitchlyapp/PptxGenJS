@@ -2133,9 +2133,9 @@ function genXmlParagraphProperties(textObj, isDefault) {
         else if (textObj.options.bullet === true) {
             paragraphPropXml += " marL=\"" + (textObj.options.indentLevel && textObj.options.indentLevel > 0 ? bulletMarL + bulletMarL * textObj.options.indentLevel : bulletMarL) + "\" indent=\"-" + bulletMarL + "\"";
             strXmlBullet = "<a:buSzPct val=\"100000\"/><a:buChar char=\"" + BULLET_TYPES['DEFAULT'] + "\"/>";
-            //if (textObj.options.bullet.color) {
-            //    strXmlBullet += '<a:buClr><a:srgbClr val="00ff00"/></a:buClr>';
-            //}
+            if (textObj.options.bullet.color) {
+                strXmlBullet += '<a:buClr><a:srgbClr val="00ff00"/></a:buClr>';
+            }
         }
         else if (textObj.options.bullet === false) {
             // We only add this when the user explicitely asks for no bullet, otherwise, it can override the master defaults!
