@@ -2096,6 +2096,7 @@ function genXmlParagraphProperties(textObj, isDefault) {
         // OPTION: bullet
         // NOTE: OOXML uses the unicode character set for Bullets
         // EX: Unicode Character 'BULLET' (U+2022) ==> '<a:buChar char="&#x2022;"/>'
+        console.log('textObj', textObj);
         if (typeof textObj.options.bullet === 'object') {
             console.log('bullet 1');
             if (textObj && textObj.options && textObj.options.bullet && textObj.options.bullet.indent)
