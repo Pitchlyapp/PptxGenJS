@@ -8,6 +8,7 @@ var JSZip = require('jszip');
  * NOTE: `enum` wont work for objects, so use `Object.freeze`
  */
 // CONST
+    console.log('cjs file');
 var EMU = 914400; // One (1) inch (OfficeXML measures in EMU (English Metric Units))
 var ONEPT = 12700; // One (1) point (pt)
 var CRLF = '\r\n'; // AKA: Chr(13) & Chr(10)
@@ -2131,6 +2132,7 @@ function genXmlParagraphProperties(textObj, isDefault) {
             }
         }
         else if (textObj.options.bullet === true) {
+            console.log('bullet.cjs');
             paragraphPropXml += " marL=\"" + (textObj.options.indentLevel && textObj.options.indentLevel > 0 ? bulletMarL + bulletMarL * textObj.options.indentLevel : bulletMarL) + "\" indent=\"-" + bulletMarL + "\"";
             strXmlBullet = "<a:buSzPct val=\"100000\"/><a:buChar char=\"" + BULLET_TYPES['DEFAULT'] + "\"/>";
           //if (textObj.options.bullet.color) {
