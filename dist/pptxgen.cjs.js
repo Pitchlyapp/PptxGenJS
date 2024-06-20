@@ -2135,6 +2135,7 @@ function genXmlParagraphProperties(textObj, isDefault) {
             strXmlBullet = "<a:buSzPct val=\"100000\"/><a:buChar char=\"" + BULLET_TYPES['DEFAULT'] + "\"/>";
             if (textObj.options.bullet.color) {
                 strXmlBullet += '<a:buClr><a:srgbClr val="00ff00"/></a:buClr>';
+                console.log('bullet', strXmlBullet);
             }
         }
         else if (textObj.options.bullet === false) {
