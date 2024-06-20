@@ -2097,6 +2097,7 @@ function genXmlParagraphProperties(textObj, isDefault) {
         // NOTE: OOXML uses the unicode character set for Bullets
         // EX: Unicode Character 'BULLET' (U+2022) ==> '<a:buChar char="&#x2022;"/>'
         if (typeof textObj.options.bullet === 'object') {
+            console.log('bullet 1');
             if (textObj && textObj.options && textObj.options.bullet && textObj.options.bullet.indent)
                 bulletMarL = valToPts(textObj.options.bullet.indent);
             if (textObj.options.bullet.type) {
@@ -2132,7 +2133,7 @@ function genXmlParagraphProperties(textObj, isDefault) {
             }
         }
         else if (textObj.options.bullet === true) {
-            console.log('bullet.cjs');
+            console.log('bullet 2');
             paragraphPropXml += " marL=\"" + (textObj.options.indentLevel && textObj.options.indentLevel > 0 ? bulletMarL + bulletMarL * textObj.options.indentLevel : bulletMarL) + "\" indent=\"-" + bulletMarL + "\"";
             strXmlBullet = "<a:buSzPct val=\"100000\"/><a:buChar char=\"" + BULLET_TYPES['DEFAULT'] + "\"/>";
           //if (textObj.options.bullet.color) {
