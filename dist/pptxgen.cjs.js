@@ -2150,6 +2150,7 @@ function genXmlParagraphProperties(textObj, isDefault) {
         // B: Close Paragraph-Properties
         // IMPORTANT: strXmlLnSpc, strXmlParaSpc, and strXmlBullet require strict ordering - anything out of order is ignored. (PPT-Online, PPT for Mac)
         paragraphPropXml += '>' + strXmlLnSpc + strXmlParaSpc + strXmlBullet;
+        console.log('strXmlBullet', strXmlBullet);
         if (isDefault)
             paragraphPropXml += genXmlTextRunProperties(textObj.options, true);
         paragraphPropXml += '</' + tag + '>';
