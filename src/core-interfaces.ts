@@ -319,6 +319,7 @@ export interface TextBaseProps {
 				 * @deprecated v3.3.0 - use `characterCode`
 				 */
 				code?: string
+                color?: string
 				/**
 				 * Margin between bullet and text
 				 * @since v3.2.1
