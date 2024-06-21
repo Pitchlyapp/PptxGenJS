@@ -2137,9 +2137,9 @@ function genXmlParagraphProperties(textObj, isDefault) {
         else if (textObj.options.bullet === true) {
             console.log('bullet 2');
             paragraphPropXml += " marL=\"" + (textObj.options.indentLevel && textObj.options.indentLevel > 0 ? bulletMarL + bulletMarL * textObj.options.indentLevel : bulletMarL) + "\" indent=\"-" + bulletMarL + "\"";
-            strXmlBullet = "<a:buSzPct val=\"100000\"/><a:buChar char=\"" + BULLET_TYPES['DEFAULT'] + "\"/>";
+            strXmlBullet = "<a:buSzPct val=\"100000\"/><a:buClr><a:srgbClr val=\"00FF00\"/></a:buClr><a:buChar char=\"" + BULLET_TYPES['DEFAULT'] + "\"/>";
           //if (textObj.options.bullet.color) {
-              strXmlBullet += '<a:buClr><a:srgbClr val="00FF00"/></a:buClr>';
+              //strXmlBullet += '<a:buClr><a:srgbClr val="00FF00"/></a:buClr>';
           //}
         }
         else if (textObj.options.bullet === false) {
