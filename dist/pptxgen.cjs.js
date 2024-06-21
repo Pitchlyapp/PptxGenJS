@@ -8,7 +8,6 @@ var JSZip = require('jszip');
  * NOTE: `enum` wont work for objects, so use `Object.freeze`
  */
 // CONST
-    console.log('cjs file');
 var EMU = 914400; // One (1) inch (OfficeXML measures in EMU (English Metric Units))
 var ONEPT = 12700; // One (1) point (pt)
 var CRLF = '\r\n'; // AKA: Chr(13) & Chr(10)
