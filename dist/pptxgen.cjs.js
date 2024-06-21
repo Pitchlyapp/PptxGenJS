@@ -2096,9 +2096,7 @@ function genXmlParagraphProperties(textObj, isDefault) {
         // OPTION: bullet
         // NOTE: OOXML uses the unicode character set for Bullets
         // EX: Unicode Character 'BULLET' (U+2022) ==> '<a:buChar char="&#x2022;"/>'
-        console.log('textObj', textObj);
         if (typeof textObj.options.bullet === 'object') {
-            console.log('bullet 1');
             if (textObj && textObj.options && textObj.options.bullet && textObj.options.bullet.indent)
                 bulletMarL = valToPts(textObj.options.bullet.indent);
             if (textObj.options.bullet.type) {
@@ -2139,7 +2137,6 @@ function genXmlParagraphProperties(textObj, isDefault) {
             }
         }
         else if (textObj.options.bullet === true) {
-            console.log('bullet 2');
             paragraphPropXml += " marL=\"" + (textObj.options.indentLevel && textObj.options.indentLevel > 0 ? bulletMarL + bulletMarL * textObj.options.indentLevel : bulletMarL) + "\" indent=\"-" + bulletMarL + "\"";
             if (textObj.options.bullet.color) {
                 strXmlBullet = "<a:buSzPct val=\"100000\"/><a:buClr><a:srgbClr val=\"" + textObj.options.bullet.color + "\"/></a:buClr><a:buChar char=\"" + BULLET_TYPES['DEFAULT'] + "\"/>";
@@ -2155,12 +2152,10 @@ function genXmlParagraphProperties(textObj, isDefault) {
         // B: Close Paragraph-Properties
         // IMPORTANT: strXmlLnSpc, strXmlParaSpc, and strXmlBullet require strict ordering - anything out of order is ignored. (PPT-Online, PPT for Mac)
         paragraphPropXml += '>' + strXmlLnSpc + strXmlParaSpc + strXmlBullet;
-        console.log('strXmlBullet', strXmlBullet);
         if (isDefault)
             paragraphPropXml += genXmlTextRunProperties(textObj.options, true);
         paragraphPropXml += '</' + tag + '>';
     }
-    console.log('paragraphPropXml', paragraphPropXml);
     return paragraphPropXml;
 }
 /**
