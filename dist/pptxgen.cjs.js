@@ -2155,6 +2155,7 @@ function genXmlParagraphProperties(textObj, isDefault) {
             paragraphPropXml += genXmlTextRunProperties(textObj.options, true);
         paragraphPropXml += '</' + tag + '>';
     }
+    console.log(paragraphPropXml);
     return paragraphPropXml;
 }
 /**
