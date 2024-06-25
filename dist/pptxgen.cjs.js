@@ -1958,7 +1958,7 @@ function slideObjectToXml(slide) {
         strSlideXml += '</p:txBody></p:sp>';
     }
     // STEP 6: Close spTree and finalize slide XML
-    strSlideXml += '</p:spTree>';
+    //strSlideXml += '</p:spTree>';
   strSlideXml += '</p:grpSp>';
     strSlideXml += '</p:cSld>';
     // LAST: Return
