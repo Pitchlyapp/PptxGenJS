@@ -1392,7 +1392,7 @@ function slideObjectToXml(slide) {
                 '</p:bg>';
     }
     // STEP 3: Continue slide by starting spTree node
-//    strSlideXml += '<p:spTree>';
+    strSlideXml += '<p:spTree>';
   strSlideXml += '<p:grpSp>';
     strSlideXml += '<p:nvGrpSpPr><p:cNvPr id="1" name=""/><p:cNvGrpSpPr/><p:nvPr/></p:nvGrpSpPr>';
     strSlideXml += '<p:grpSpPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="0" cy="0"/>';
@@ -1958,8 +1958,8 @@ function slideObjectToXml(slide) {
         strSlideXml += '</p:txBody></p:sp>';
     }
     // STEP 6: Close spTree and finalize slide XML
-    //strSlideXml += '</p:spTree>';
   strSlideXml += '</p:grpSp>';
+    strSlideXml += '</p:spTree>';
     strSlideXml += '</p:cSld>';
     // LAST: Return
   console.log(strSlideXml);
